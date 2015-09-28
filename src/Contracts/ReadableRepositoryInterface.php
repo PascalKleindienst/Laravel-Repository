@@ -13,6 +13,13 @@ interface ReadableRepositoryInterface
     public function all(array $columns = ['*']);
 
     /**
+     * @param  string $value
+     * @param  string $key
+     * @return array
+     */
+    public function lists($value, $key = null);
+
+    /**
      * @param $id
      * @param array $columns
      * @return mixed
@@ -20,12 +27,12 @@ interface ReadableRepositoryInterface
     public function find($id, array $columns = ['*']);
 
     /**
-     * @param $field
+     * @param $attribute
      * @param $value
      * @param array $columns
      * @return mixed
      */
-    public function findBy($field, $value, array $columns = ['*']);
+    public function findBy($attribute, $value, array $columns = ['*']);
 
     /**
      * @param $field
@@ -38,7 +45,8 @@ interface ReadableRepositoryInterface
     /**
      * @param $where
      * @param array $columns
+     * @param bool  $useOr
      * @return mixed
      */
-    public function findWhere($where, array $columns = ['*']);
+    public function findWhere($where, array $columns = ['*'], $useOr = null);
 }
