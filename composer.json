@@ -1,0 +1,34 @@
+{
+  "name": "pare/repository",
+  "description": "Laravel - Repositories to  the database layer",
+  "minimum-stability": "dev",
+  "keywords": ["laravel", "repository", "eloquent", "model", "cache"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pascal Kleindienst",
+      "email": "hello@pascalkleindienst.de"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "illuminate/http": "~5.0|~5.1",
+    "illuminate/support": "~5.0|~5.1",
+    "illuminate/database": "~5.0|~5.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pare\\Repository\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pare\\Tests\\Repository\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.x-dev"
+    }
+  }
+}
