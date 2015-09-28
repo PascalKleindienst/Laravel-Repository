@@ -21,9 +21,10 @@ interface WriteableRepositoryInterface
     /**
      * @param array $data
      * @param $id
+     * @param string $attribute
      * @return mixed
      */
-    public function update(array $data, $id);
+    public function update(array $data, $id, $attribute = "id");
 
     /**
      * @param $id
