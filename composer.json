@@ -16,6 +16,9 @@
     "illuminate/support": "~5.0|~5.1",
     "illuminate/database": "~5.0|~5.1"
   },
+  "require-dev": {
+    "orchestra/testbench": "~3.0"
+  },
   "autoload": {
     "psr-4": {
       "Pare\\Repository\\": "src/"
