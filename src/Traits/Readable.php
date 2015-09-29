@@ -12,6 +12,7 @@ trait Readable
      */
     public function all(array $columns = ['*'])
     {
+        $this->applyCriteria();
         return $this->model->get($columns);
     }
 
@@ -22,6 +23,7 @@ trait Readable
      */
     public function lists($value, $key = null)
     {
+        $this->applyCriteria();
         $lists = $this->model->lists($value, $key);
         if (is_array($lists)) {
             return $lists;
@@ -36,6 +38,7 @@ trait Readable
      */
     public function find($id, array $columns = ['*'])
     {
+        $this->applyCriteria();
         return $this->model->find($id, $columns);
     }
 
@@ -47,6 +50,7 @@ trait Readable
      */
     public function findBy($attribute, $value, array $columns = ['*'])
     {
+        $this->applyCriteria();
         return $this->model->where($attribute, '=', $value)->first($columns);
     }
 
@@ -58,6 +62,7 @@ trait Readable
      */
     public function findAllBy($attribute, $value, array $columns = ['*'])
     {
+        $this->applyCriteria();
         return $this->model->where($attribute, '=', $value)->get($columns);
     }
 
@@ -72,6 +77,7 @@ trait Readable
      */
     public function findWhere($where, array $columns = ['*'], $useOr = null)
     {
+        $this->applyCriteria();
         $model  = $this->model;
         $method = (! $useOr) ? 'where' : 'orWhere';
 
